@@ -1,13 +1,7 @@
 <?php
 //SGB TEM
 //ORIABLE TOOLS
-//AHYAR
-//AGWJY
 //ikiganteng
-//SHARE IT AUTO DRAW KNTL KNTL KNTL
-//EDIT CURLOPT_FIELDNYA,dibagian IDENTYTYD ID,TRACE_ID,DEVICE IDNYA JUGAX HEHEHEH
-//GET Pakai PACKETCAPTURE 
-date_default_timezone_set("Asia/Jakarta");
 function read ($length='255') 
 { 
    if (!isset ($GLOBALS['StdinPointer'])) 
@@ -32,9 +26,10 @@ function add($code){
     $headers[] = "X-Client-Net: 1";
     $headers[] = "X-DeviceId: 275de3449fbdf8f73446b74c93582097";
     $headers[] = "Host: i.kaixindou.net";
+    $headers[] = "Connection: Keep-Alive";
+    $headers[] = "Accept-Encoding: gzip";
     $headers[] = "User-Agent: okhttp/3.8.1";
     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-    
     $result = curl_exec($ch);
     if(curl_errno($ch)) {
         echo 'Error:' . curl_error($ch);
@@ -50,5 +45,5 @@ $no = read();
 for ($x = 0; $x <= $jumlah; $x++){
     $go = add($no);
     echo $go."\n";
-   sleep(5);
+   sleep(10);
 }
