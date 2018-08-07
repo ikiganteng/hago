@@ -50,4 +50,5 @@ $no = read();
 for ($x = 0; $x <= $jumlah; $x++){
     $go = add($no);
     echo $go."\n";
+   sleep(5);
 }
