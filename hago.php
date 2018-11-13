@@ -15,7 +15,7 @@ function add($code){
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, "https://i.kaixindou.net/uaas/sms/sendCode");
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, "timestamp=1533657825710&appId=ikxd&sign=1cbe66ed37cd689159b67f9733b5530fe0869c616795946190eaaae436161b6a&oper_type=0&country_code=62&mobile=".$code."&nonstr=15336578257102333");
+    curl_setopt($ch, CURLOPT_POSTFIELDS, "timestamp=1542076501679&appId=ikxd&sign=b0fde4260b9f25d517f4c87fae97177d3f6d27771fae53c19e4f9c13ac6e60bb&oper_type=0&country_code=62&mobile=".$code."&nonstr=15336578257102333");
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_ENCODING, 'gzip, deflate');
     $headers = array();
